@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{cmap}
+\usepackage{mathtext}
+\usepackage{amsmath,amssymb}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{bmstu-lab}
+\usepackage{mathtools}
+
+
+\begin{document}
+\graphicspath{{images/}{images2/}} % папки с картинками
+
+\worknumber{1}
+\variant{10}
+\workname{Математика в \LaTeX}
+\discipline{Автоматизация процессов разработки научно-технической документации}
+\group{ИУ6-65Б}
+\date{27.02.21}
+\author{А.Н.Золкин}
+\tutor[Преподаватель]{Т.А.Ким}
+\bmstutitlelab
+
+\section{Матрицы}
+\subsection{Задание}
+$$
+  \begin{bmatrix}
+    \frac{1}{\infty} & 2      \\
+    a                & b      \\
+    c                & \aleph
+  \end{bmatrix}
+$$
+\subsection{Дополнительно}
+$$
+  \begin{pmatrix}
+    1      & 2     & 3      \\
+    a      & b     & c      \\
+    \alpha & \beta & \infty
+  \end{pmatrix}
+  \hspace{1cm}
+  \begin{Bmatrix}
+    1         & 2            & 3        \\
+    a         & b            & c        \\
+    \rho\beta & \sigma\alpha & \delta^2
+  \end{Bmatrix}
+$$
+
+\section{Интеграл}
+\[ \int_{\beta_0C}^{\beta_nA^\theta} f_\beta\left(\theta_\beta\right) \,d\theta_\beta \geqslant \zeta_\beta\]
+
+\section{Сумма}
+\[ \frac{ \sum_{i=0}^{N}x_i\alpha\beta + 121}{1 + \Delta(N+C)}\]
+\vspace{1cm}
+\[ \frac{\displaystyle \sum_{i=0}^{N} \frac{x_i}{1+C} + 23 }{1 + \Delta(N+C)}\]
+\section{Два столбика}
+\begin{alignat}{3}
+   & \frac{ \sum_{i=0}^{N}x_i\alpha\beta + 121}{1 + \Delta(N+C)} &  &  & \int_{\beta_0C}^{\beta_nA^\theta} f_\beta\left(\theta_\beta\right) \,d\theta_\beta \geqslant \zeta_\beta \label{eq1} \\
+   & a_1 < a_2, a_2 \text{--- простое}_\text{число}              &  &  & a_2\& a_3 \label{eq2}
+\end{alignat}
+Ссылки \eqref{eq1}, \eqref{eq2} необходимы для правильной нумерации формул.
+\section{Почти то же самое}
+\begin{equation} \label{eq3}
+  \begin{aligned}
+    \begin{aligned}
+       & \frac{ \sum_{i=0}^{N}x_i\alpha\beta + 121}{1 + \Delta(N+C)} & \int_{\beta_0C}^{\beta_nA^\theta} f_\beta\left(\theta_\beta\right) \,d\theta_\beta \geqslant \zeta_\beta \\
+       & a_1 < a_2, a_2 \text{--- простое}_\text{число}              & a_2\& a_3
+    \end{aligned}
+  \end{aligned}
+\end{equation} \\
+На странице \pageref{eq3} есть формулы \eqref{eq3}
+\end{document}

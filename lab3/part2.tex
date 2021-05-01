@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{bmstu-lab}
+
+\newcounter{nc}[section]
+\renewcommand{\thenc}{\Roman{nc}} %% переопределяем формат вывода значения счетчика
+\newenvironment{nc}[1][]{\refstepcounter{nc}\par\medskip
+   Счетчик \thenc. \rmfamily}{\medskip}
+
+%% переопределяем символ для уровней маркированного списка
+\renewcommand{\labelitemi}{$\spadesuit$}
+\renewcommand{\labelitemii}{$\clubsuit$}
+\renewcommand{\labelitemiii}{$\heartsuit$}
+\renewcommand{\labelitemiv}{$\diamondsuit$}
+
+%% переопределяем символ для уровней нумерованный списка
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumiv}.}
+
+\newenvironment{nenv}
+{
+    \begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+        \hline\\
+}
+{
+    \\\\\hline
+    \end{tabular}
+    \end{center}
+}
+
+
+\begin{document}
+\graphicspath{{images/}{images2/}}
+\worknumber{3}
+\variant{10}
+\workname{Русский язык в \LaTeX часть 2}
+\discipline{Автоматизация процессов разработки научно-технической документации}
+\group{ИУ6-65Б}
+\date{18.04.21}
+\author{А.Н.Золкин}
+\tutor[Преподаватель]{Т.А.Ким}
+\bmstutitlelab
+
+\section{Счетчики 1}
+
+\begin{nc}
+    \thesection. Секция 1
+    \begin{enumerate}
+        \item Значение счетчика: \thenc
+        \item Значение счетчика: \thenc
+    \end{enumerate}
+\end{nc}
+
+\section{Окружения}
+\begin{enumerate}
+    \item \begin{nenv}
+              Новое окружение 1
+          \end{nenv}
+    \item  \begin{nenv}
+              Новое окружение 2
+          \end{nenv}
+\end{enumerate}
+
+\section{Маркированный список}
+\begin{itemize}
+    \item Заголовок
+          \begin{itemize}
+              \item Первый уровень
+                    \begin{itemize}
+                        \item Второй уровень
+                              \begin{itemize}
+                                  \item Третий уровень
+                              \end{itemize}
+                    \end{itemize}
+          \end{itemize}
+\end{itemize}
+
+\section{Нумерованный список}
+\begin{enumerate}
+    \item Заголовок 1
+          \begin{enumerate}
+              \item Первый уровень
+              \item Первый уровень
+                    \begin{enumerate}
+                        \item Второй уровень
+                        \item Второй уровень
+                              \begin{enumerate}
+                                  \item Третий уровень
+                                  \item Третий уровень
+                              \end{enumerate}
+                    \end{enumerate}
+          \end{enumerate}
+    \item Заголовок 2
+          \begin{enumerate}
+              \item Первый уровень
+              \item Первый уровень
+                    \begin{enumerate}
+                        \item Второй уровень
+                        \item Второй уровень
+                              \begin{enumerate}
+                                  \item Третий уровень
+                                  \item Третий уровень
+                              \end{enumerate}
+                    \end{enumerate}
+          \end{enumerate}
+\end{enumerate}
+\end{document}
