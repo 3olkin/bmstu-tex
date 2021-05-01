@@ -4,9 +4,12 @@
 \usepackage{bmstu-lab}
 
 \newcounter{nc}[section]
-\renewcommand{\thenc}{\Roman{nc}} %% переопределяем формат вывода значения счетчика
-\newenvironment{nc}[1][]{\refstepcounter{nc}\par\medskip
-   Счетчик \thenc. \rmfamily}{\medskip}
+\renewcommand{\thenc}{Счетчик \Roman{nc}.} %% переопределяем формат вывода значения счетчика
+\newenvironment{nc}[1][]{\stepcounter{nc}}{}
+
+\newcounter{simple}[section]
+\renewcommand{\thesimple}{\arabic{simple}. }
+\newenvironment{simple}[1][]{\stepcounter{simple}}{}
 
 %% переопределяем символ для уровней маркированного списка
 \renewcommand{\labelitemi}{$\spadesuit$}
@@ -43,16 +46,14 @@
 \date{18.04.21}
 \author{А.Н.Золкин}
 \tutor[Преподаватель]{Т.А.Ким}
-\bmstutitlelab
+% \bmstutitlelab
 
-\section{Счетчики 1}
+\section{Счетчики}
 
 \begin{nc}
-    \thesection. Секция 1
-    \begin{enumerate}
-        \item Значение счетчика: \thenc
-        \item Значение счетчика: \thenc
-    \end{enumerate}
+    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
+    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
+    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
 \end{nc}
 
 \section{Окружения}
