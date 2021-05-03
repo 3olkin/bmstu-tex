@@ -3,13 +3,12 @@
 \usepackage[english,russian]{babel}
 \usepackage{bmstu-lab}
 
-\newcounter{nc}[section]
-\renewcommand{\thenc}{Счетчик \Roman{nc}.} %% переопределяем формат вывода значения счетчика
-\newenvironment{nc}[1][]{\stepcounter{nc}}{}
-
 \newcounter{simple}[section]
 \renewcommand{\thesimple}{\arabic{simple}. }
 \newenvironment{simple}[1][]{\stepcounter{simple}}{}
+
+\newcounter{nc}[section]
+\renewcommand{\thenc}{Счетчик \Roman{nc}.} %% переопределяем формат вывода значения счетчика
 
 %% переопределяем символ для уровней маркированного списка
 \renewcommand{\labelitemi}{$\spadesuit$}
@@ -20,19 +19,18 @@
 %% переопределяем символ для уровней нумерованный списка
 \renewcommand{\labelenumi}{\arabic{enumi}.}
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
-\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumiii}.}
-\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumiv}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
+\renewcommand{\labelenumiv}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}.}
 
 \newenvironment{nenv}
 {
-    \begin{center}
-    \begin{tabular}{|p{0.9\textwidth}|}
-        \hline\\
+    \renewcommand{\thenc}{Окружение \Roman{nc}.} %% переопределяем формат вывода значения счетчика
+    \renewcommand{\thesimple}{\arabic{simple}.} %% переопределяем формат вывода значения счетчика
+    \begin{simple}
+        \thenc\thesimple\quad<<Созданное окружение \thesimple>>\quad
 }
 {
-    \\\\\hline
-    \end{tabular}
-    \end{center}
+    \end{simple} \\
 }
 
 
@@ -46,35 +44,35 @@
 \date{18.04.21}
 \author{А.Н.Золкин}
 \tutor[Преподаватель]{Т.А.Ким}
-% \bmstutitlelab
+\bmstutitlelab
 
 \section{Счетчики}
-
-\begin{nc}
-    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
-    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
-    \thenc \begin{simple} \thesimple Какой-то текст \end{simple} \\
-\end{nc}
+\stepcounter{nc}
+\begin{simple}
+    \thenc \thesimple Какой-то текст... \\
+\end{simple}
+\begin{simple}
+    \thenc \thesimple Еще какой-то текст...
+\end{simple}
 
 \section{Окружения}
-\begin{enumerate}
-    \item \begin{nenv}
-              Новое окружение 1
-          \end{nenv}
-    \item  \begin{nenv}
-              Новое окружение 2
-          \end{nenv}
-\end{enumerate}
+\stepcounter{nc}
+\begin{nenv}
+    Тело окружения \thesimple
+\end{nenv}
+\begin{nenv}
+    Тело окружения \thesimple
+\end{nenv}
 
 \section{Маркированный список}
 \begin{itemize}
     \item Заголовок
           \begin{itemize}
-              \item Первый уровень
+              \item Первый уровень вложенности
                     \begin{itemize}
-                        \item Второй уровень
+                        \item Второй уровень вложенности
                               \begin{itemize}
-                                  \item Третий уровень
+                                  \item Третий уровень вложенности
                               \end{itemize}
                     \end{itemize}
           \end{itemize}
@@ -84,27 +82,59 @@
 \begin{enumerate}
     \item Заголовок 1
           \begin{enumerate}
-              \item Первый уровень
-              \item Первый уровень
+              \item Первый уровень вложенности
                     \begin{enumerate}
-                        \item Второй уровень
-                        \item Второй уровень
+                        \item Второй уровень вложенности
                               \begin{enumerate}
-                                  \item Третий уровень
-                                  \item Третий уровень
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                    \end{enumerate}
+              \item Первый уровень вложенности
+                    \begin{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
                               \end{enumerate}
                     \end{enumerate}
           \end{enumerate}
     \item Заголовок 2
           \begin{enumerate}
-              \item Первый уровень
-              \item Первый уровень
+              \item Первый уровень вложенности
                     \begin{enumerate}
-                        \item Второй уровень
-                        \item Второй уровень
+                        \item Второй уровень вложенности
                               \begin{enumerate}
-                                  \item Третий уровень
-                                  \item Третий уровень
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                    \end{enumerate}
+              \item Первый уровень вложенности
+                    \begin{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
+                              \end{enumerate}
+                        \item Второй уровень вложенности
+                              \begin{enumerate}
+                                  \item Третий уровень вложенности
+                                  \item Третий уровень вложенности
                               \end{enumerate}
                     \end{enumerate}
           \end{enumerate}
