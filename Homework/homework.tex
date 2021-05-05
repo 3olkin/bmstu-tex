@@ -1,0 +1,176 @@
+%!TEX TS-program = xelatex
+\documentclass[a4paper,14pt]{article}
+%%% Работа с русским языком
+\usepackage[english,russian]{babel} %% загружает пакет многоязыковой вeрстки
+\usepackage{fontspec} %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаeт основной шрифт документа
+\usepackage{indentfirst}
+\frenchspacing
+
+\usepackage{mathtext}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs=true}
+\usepackage{amsmath,amssymb} % AMS
+\usepackage{icomma}
+
+%%% Other packages
+\usepackage{extsizes} %% расширяет диапазон доступных кеглей
+\usepackage{setspace}
+\usepackage{pdfpages}
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+\usepackage{icomma}
+\usepackage{geometry}
+\geometry{top=20mm}
+\geometry{bottom=20mm}
+\geometry{left=30mm}
+\geometry{right=15mm}
+
+%% переопределяем символ для уровней нумерованного списка
+\renewcommand{\labelenumi}{\arabic{enumi})}
+
+%%% Пример
+\newcounter{example}[section]
+\setcounter{example}{1}
+\newenvironment{example}{\refstepcounter{example}\par\medskip\textbf{Пример \thesection.\theexample.}~}{\medskip}
+%%% Упражнение
+\newenvironment{exercise}{\par\medskip\textbf{Упражнение.}~}{\medskip}
+%%% Определение
+\newcounter{definition}[section]
+\setcounter{definition}{5}
+\newenvironment{definition}{\refstepcounter{definition}\par\medskip\textbf{Определение \thesection.\thedefinition.}~}{\medskip}
+
+\begin{document}
+\onehalfspacing
+%% Заглушка для секции, которая должна быть где-то раньше в книге
+\section*{}
+\setcounter{section}{1}
+\noindent и достаточно $B$>>), которое истинно, когда высказывания $A$ и $B$ истинны или ложны одновременно.
+\par Наряду с $A \Leftrightarrow B$ в эквиваленции используется запись: $A = B$.
+\par Итак, при помощи логических операций построено множество высказываний, которое называют \emph{алгеброй высказываний}.
+\par Основные формулы алгебры высказываний следующие:
+\begin{enumerate}
+    \item $\neg (\neg A) = A$ \label{enum:1:1};
+    \item законы \emph{дистрибутивности} (распределительные законы): \\
+          $A \wedge (B \vee C) = (A \wedge B) \vee (A \wedge C)$; \\
+          $A \vee (B \wedge C) = (A \vee B) \wedge (A \vee C)$;
+    \item законы де Моргана\footnote[2]{\small{~\emph{Огастес де Морган} (1806-1871) ~--~ шотландский математик, логик, основоположник логической теории отношений}}: \\
+          $\neg(A \wedge B) = (\neg A) \vee (\neg B)$; \\
+          $\neq(A \vee B) = (\neg A) \wedge (\neg B)$;
+    \item $A \Rightarrow B = (\neg A) \vee B$ \label{enum:1:4};
+    \item $\neg(A \Rightarrow B) = A \wedge (\neg B)$ \label{enum:1:5}.
+\end{enumerate}
+\par Эти формулы могут быть доказаны сравнением соответствующих таблиц истинности.
+\begin{example}
+    Докажем формулу \ref{enum:1:5}). Таблица истинности для утверждения в левой части имеет вид:
+    \begin{center}
+        \begin{tabular}{|c|c cc ccc|}
+            \hline
+            ~$A$~      & ~$B$~      & \multicolumn{2}{|c|}{~$A \Rightarrow B$~} & \multicolumn{3}{|c|}{~$\neg(A \Rightarrow B)$~} \\
+            \hline
+            ~\emph{и}~ & ~\emph{и}~ & \multicolumn{2}{|c|}{~\emph{и}~}          & \multicolumn{3}{|c|}{~\emph{л}~}                \\
+            \hline
+            ~\emph{и}~ & ~\emph{л}~ & \multicolumn{2}{|c|}{~\emph{л}~}          & \multicolumn{3}{|c|}{~\emph{и}~}                \\
+            \hline
+            ~\emph{л}~ & ~\emph{и}~ & \multicolumn{2}{|c|}{~\emph{и}~}          & \multicolumn{3}{|c|}{~\emph{л}~}                \\
+            \hline
+            ~\emph{л}~ & ~\emph{л}~ & \multicolumn{2}{|c|}{~\emph{и}~}          & \multicolumn{3}{|c|}{~\emph{л}~}                \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{example}
+
+\newpage
+\noindent А таблица истинности для утверждения в правой части имеет вид:
+\begin{center}
+    \begin{tabular}{|c|c cc ccc|}
+        \hline
+        ~$A$~      & ~$B$~      & \multicolumn{2}{|c|}{~$\neg B$~} & \multicolumn{3}{|c|}{~$A \wedge (\neg B)$~} \\
+        \hline
+        ~\emph{и}~ & ~\emph{и}~ & \multicolumn{2}{|c|}{~\emph{л}~} & \multicolumn{3}{|c|}{~\emph{л}~}            \\
+        \hline
+        ~\emph{и}~ & ~\emph{л}~ & \multicolumn{2}{|c|}{~\emph{и}~} & \multicolumn{3}{|c|}{~\emph{и}~}            \\
+        \hline
+        ~\emph{л}~ & ~\emph{и}~ & \multicolumn{2}{|c|}{~\emph{л}~} & \multicolumn{3}{|c|}{~\emph{л}~}            \\
+        \hline
+        ~\emph{л}~ & ~\emph{л}~ & \multicolumn{2}{|c|}{~\emph{и}~} & \multicolumn{3}{|c|}{~\emph{л}~}            \\
+        \hline
+    \end{tabular}
+\end{center}
+\medskip Сравнивая эти таблицы, видим, что утверждения в правой и левой части принимают одинаковые значения.
+\begin{exercise}
+    С помощью таблиц истинности докажите формулы \ref{enum:1:1}~--~\ref{enum:1:4}.
+\end{exercise}
+\par Следующие импликации носят названия:z
+\par $T = (A \Rightarrow B)$ ~--~ \emph{прямая теорема},
+\par $T = (B \Rightarrow A)$ ~--~ \emph{теорема, обратная к предыдущей}. \\
+Справедлива формула:
+\begin{center}
+    $(A \Rightarrow B) = ((\neg B) \Rightarrow (\neg A))$,
+\end{center}
+\noindent которая служит основой для распространенного в математике доказательства методом <<от противного>>. Действительно, левая часть формулы ложна тогда и только тогда, когда $A =$ \emph{и}, а $B =$ \emph{л}. Но и правая часть ложна тоже только в этом случае.
+\par Следует отметить, что из истинности прямой теоремы еще не следует истинность обратной к ней теоремы, как это видно из примера
+%% ! нет примера для ссылки
+$1.1$: в разобранном примере из утверждения $B$ не следует утверждение $A$, потому что, как известно, существуют четные числа, не кратные четырем (например, 2).
+
+\newpage
+\subsection*{\emph{Предикаты и кванторы}}
+\begin{definition}
+    Суждение, зависящее от переменной величины, которое при подстанвке значений переменного становится высказыванием, называют \emph{предикатом}.
+\end{definition}
+\begin{example}
+    $A(x) =$ <<студент $x$ учится на физическом факультете>> есть предикат, зависящий от одного переменного $x$. Здесь $A(x)$ -- одноместный предикат. Неравенство $B(x,y) = x^2 + y^2 \geqslant 0$ представляет собой двуместный предикат.
+\end{example}
+\par\medskip Как и для высказываний, с помощью логических операций $\vee, \wedge, \neg, \Rightarrow, \Leftrightarrow$ можно строить новые предикаты, и мы получим \emph{алгебру предикатов}. Новые предикаты и высказывания можно строить из предикатов также с помощью символов, называемых \emph{кванторами}:
+\par $\exists$ ~--~ \emph{квантор существования} (читается: <<существует>>, <<найдется>>),
+\par $\forall$ ~--~ \emph{квантор всеобщности} (читается: <<для любого>>, <<для всякого>>, <<для всех>>).
+\begin{definition}
+    $\forall x : A(x)$ (читается: <<\emph{для всех} $x A(x)$>>) ~--~ высказывание, которое истинно, если предикат $A(x)$ истинен для всех $x$ из его области определение, и ложно ~--~ в противном случае.
+\end{definition}
+\begin{example}
+    Утверждение <<любой студент УрФУ учится на физическом факультете (ФФ)>>, которое формально можно записать в виде:
+    \begin{center}
+        $\forall x \in$ УрФУ ~:~ \{студент $x$ учится на ФФ\},
+    \end{center}
+    есть ложное высказывание.
+\end{example}
+\par Утверждение <<квадрат действительного числа есть число неотрицательное>>, формально записывается в виде:
+\begin{center}
+    $\forall x \in \mathbb{R} : x^2 \geqslant 0$,
+\end{center}
+есть истинное высказывание.
+\begin{definition}
+    $\exists x : A(x)$ (читается: <<существует $x, A(x)$)>> ~--~ высказывание, которое истинно, если предикат $A(x)$ истинен на каком-то конкретном $x$ из его области определения, и ложно, если предикат $A(x)$ ложен при всех $x$ из его области определения.
+\end{definition}
+\begin{example}
+    Утверждение <<на физическом факультете учатся девушки>>, которое формально записывается в виде:
+    \begin{center}
+        $\exists x :$ \{девушка $x$ учится на физическом факультете\}
+    \end{center}
+    есть истинное высказывание, так как, конечно, на физическом факультете учится хотя бы одна девушка.
+    \par Высказывание $\exists x \in \mathbb{R} : x^2 + 1 \leqslant 0$ ~--~ ложное.
+\end{example}
+\par Построим отрицание высказывания $\forall x : A(x)$. Если данное утверждение не имеет места, то суждение $A(x)$ имеет место не для всех $x$, т. е. существует элемент $x$, для которого $A(x)$ не имеет места:
+\begin{center}
+    $\neg (\forall x: A(x)) = (\exists x: \neg A(x))$.
+\end{center}
+\begin{example}
+    Один маленький мальчик очень грамотно построил отрицание утверждения <<Все дети любят кашу>>. Он подумал и, решительно отодвинув от себя тарелку, сказал: <<Не все>>.
+\end{example}
+\par Совершенно аналогично
+\begin{center}
+    $\neg (\exists x: A(x)) = (\forall x: \neg A(x))$.
+\end{center}
+\par Таким образом, чтобы построить отрицание логической формулы, содержащей кванторы, необходимо квантор $\forall$ заменить на квантор $\exists$, а квантор $\exists$ заменить на квантор $\forall$ и предикат заменить на его отрицание.
+\begin{example}
+    % \begin{eqnarray}
+    %     \neg (\forall x: \{\exists y: [\forall z: A(x,y,z)]\}) = \\ \exists x: \neg \{\exists y: [\forall z: A(x,y,z)]\})
+    % \end{eqnarray}
+    \begin{multline}
+        \neg (\forall x: \{\exists y: [\forall z: A(x,y,z)]\}) = \\\exists x: \neg \{\exists y: [\forall z: A(x,y,z)]\} = \\\exists x: \{\forall y: \neg [\forall z: A(x,y,z)]\} =
+        \\\exists x: \{\forall y: [\exists z: \neg A(x,y,z)]\}.
+    \end{multline}
+\end{example}
+\par Заметим, что скобки и двоеточия можно частично или вовсе опускать при записи такого рода логических формул, если не возникает разночтений.
+\end{document}
