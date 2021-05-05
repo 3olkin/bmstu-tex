@@ -1,0 +1,7 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Введение}{3}{0}{1}
+\beamer@sectionintoc {2}{Общий вид}{5}{0}{2}
+\beamer@sectionintoc {3}{Коэффициенты}{8}{0}{3}
+\beamer@sectionintoc {4}{Дискриминант}{12}{0}{4}
+\beamer@sectionintoc {5}{$D < 0$}{14}{0}{5}
+\beamer@sectionintoc {6}{Корни}{15}{0}{6}

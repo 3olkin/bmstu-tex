@@ -57,7 +57,7 @@
         \node (start) [startstop] {Начало};
         \node (in1) [io, below of=start] {Ввод $a, b, c$};
         \node (pro1) [process, below of=in1] {$D=b^2-4ac$};
-        \node (dec1) [decision, below of=pro1, yshift=-0.5cm] {D > 0};
+        \node (dec1) [decision, below of=pro1, yshift=-0.5cm] {D < 0};
         \node (pro2) [process, below of=dec1, yshift=-0.5cm, xshift=-3cm] {$x = \frac{-b \pm \sqrt{D}}{2a}$};
         \node (out1) [io, below of=dec1, yshift=-0.5cm, xshift=3cm] {Действ. корней нет};
         \node (out2) [io, below of=pro2] {Вывод $x$};
