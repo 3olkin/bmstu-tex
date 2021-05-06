@@ -17,6 +17,7 @@
 %%% Other packages
 \usepackage{extsizes} %% расширяет диапазон доступных кеглей
 \usepackage{setspace}
+\usepackage{enumitem}
 \usepackage{pdfpages}
 \usepackage{fancyvrb}
 \usepackage{fvextra}
@@ -29,17 +30,20 @@
 
 %% переопределяем символ для уровней нумерованного списка
 \renewcommand{\labelenumi}{\arabic{enumi})}
+%% переопределяем формат номеров секций и сабсекций
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}.}
 
 %%% Пример
 \newcounter{example}[section]
 \setcounter{example}{1}
-\newenvironment{example}{\refstepcounter{example}\par\medskip\textbf{Пример \thesection.\theexample.}~}{\medskip}
+\newenvironment{example}{\refstepcounter{example}\par\medskip\textbf{Пример \thesection\theexample.}~}{\medskip}
 %%% Упражнение
 \newenvironment{exercise}{\par\medskip\textbf{Упражнение.}~}{\medskip}
 %%% Определение
 \newcounter{definition}[section]
 \setcounter{definition}{5}
-\newenvironment{definition}{\refstepcounter{definition}\par\medskip\textbf{Определение \thesection.\thedefinition.}~}{\medskip}
+\newenvironment{definition}{\refstepcounter{definition}\par\medskip\textbf{Определение \thesection\thedefinition.}~}{\medskip}
 
 \begin{document}
 \onehalfspacing
@@ -50,7 +54,7 @@
 \par Наряду с $A \Leftrightarrow B$ в эквиваленции используется запись: $A = B$.
 \par Итак, при помощи логических операций построено множество высказываний, которое называют \emph{алгеброй высказываний}.
 \par Основные формулы алгебры высказываний следующие:
-\begin{enumerate}
+\begin{enumerate}[ref=\arabic{enumi}]
     \item $\neg (\neg A) = A$ \label{enum:1:1};
     \item законы \emph{дистрибутивности} (распределительные законы): \\
           $A \wedge (B \vee C) = (A \wedge B) \vee (A \wedge C)$; \\
@@ -164,13 +168,76 @@ $1.1$: в разобранном примере из утверждения $B$ 
 \end{center}
 \par Таким образом, чтобы построить отрицание логической формулы, содержащей кванторы, необходимо квантор $\forall$ заменить на квантор $\exists$, а квантор $\exists$ заменить на квантор $\forall$ и предикат заменить на его отрицание.
 \begin{example}
-    % \begin{eqnarray}
-    %     \neg (\forall x: \{\exists y: [\forall z: A(x,y,z)]\}) = \\ \exists x: \neg \{\exists y: [\forall z: A(x,y,z)]\})
-    % \end{eqnarray}
     \begin{multline}
-        \neg (\forall x: \{\exists y: [\forall z: A(x,y,z)]\}) = \\\exists x: \neg \{\exists y: [\forall z: A(x,y,z)]\} = \\\exists x: \{\forall y: \neg [\forall z: A(x,y,z)]\} =
-        \\\exists x: \{\forall y: [\exists z: \neg A(x,y,z)]\}.
+        \neg (\forall x: \{\exists y: [\forall z: A(x,y,z)]\}) = \\ = \exists x: \neg \{\exists y: [\forall z: A(x,y,z)]\} = \\ = \exists x: \{\forall y: \neg [\forall z: A(x,y,z)]\} = \\ = \exists x: \{\forall y: [\exists z: \neg A(x,y,z)]\}.
     \end{multline}
 \end{example}
 \par Заметим, что скобки и двоеточия можно частично или вовсе опускать при записи такого рода логических формул, если не возникает разночтений.
+
+\newpage
+\section{~Элементы теории множеств}
+\subsection{~Понятие множества}
+\par Понятие множества в математике рассматривается как первичное, неопределяемое понятие.
+\par Под \emph{множеством} будем понимать совокупность (или семейство, или собрание, или класс) объектов, обладающих определенным признаком. Например, множество деревьев в парке, множество звезд на небе, множество студентов в аудитории, множество натуральных чисел, множество корней уравнения $x^2 - 3x + 2 = 0$, множество треугольников на плоскости и т.д.
+\par Объекты, обладающие этим признаком, называются \emph{элементами множества}. Множества будем обозначать заглавными буквами $A, B, C$,..., а элементы этих множеств -- строчными буквами $a, b, c$,.... Множество \emph{содержит} элементы, а элементы \emph{принадлежат} множеству. Для обозначения принадлежности используется знак $\in$. Если $a$ элемент множества $A$, то этот факт записывается так: $a \in A$. Запись $b \notin A$ означает, что элемент $b$ не принадлежит множеству $A$. Так, имеем $3 \in \mathbb{Z}$ и $\frac{1}{2} \notin \mathbb{Z}$.
+\par Множества делятся на \emph{конечные} и \emph{бесконечные}. Например, множества $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}$ бесконечны, а множество корней уравнения $x^2 -5x + 6 = 0$ конечно. Множество, не содержащее элементов, называется \emph{пустым}. Пустое множество обозначается символов $\emptyset$ Запись
+\begin{center}
+    $C = \{x \in B~|~P(x)\}$
+\end{center}
+обозначает множество, состоящее из всех тех и тлько тех элементов множества $B$, которое обладает свойством $P(x)$.
+\par Например, $\{x \in \mathbb{R}~|~0 \leqslant x \leqslant 1$ ~--~ множество тех действительных чисел, которые обладают свойством быть не меньше нуля и не больше единицы.
+\begin{definition}
+    Множество $Y$ называется \emph{подмножеством} множества $X$, если любой элемент множества $Y$ является элементом множества $X$. Это обозначается записью $Y \subseteq X$.
+    \par В кванторах это определение можно записать следующим образом:
+    \begin{center}
+        $\forall y \in Y : y \in X$.
+    \end{center}
+    \par Например, $\{1,2\} \subseteq \{1,2,-\frac{1}{2}\},~~\mathbb{N} \subseteq \mathbb{Z},~~\mathbb{Z} \subseteq \mathbb{Q},~~\mathbb{Q} \subseteq \mathbb{R}$.
+    \par Из определения подмножества следует, что всякое множество является подмножеством самого себя, а пустое множество является подмножеством любого множества.
+\end{definition}
+\begin{example}
+    Решим следующую простую задачу: найти все подмножества множества $\{1,2,3\}$. Очевидно, что это множество имеет восемь подмножеств: $\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}$ и $\{1,2,3\}$.
+\end{example}
+\begin{definition}
+    Множество $X$ \emph{равно} множеству $Y$, если любой элемент множества $X$ является элементом множества $Y$ и любой элемент множества $Y$ является элементом множества $X$. Другими словами, если $X$ и $Y$ состоят из одних и тех же элементов. На письме это обозначается обычным образом: $X=Y$.
+\end{definition}
+\par Из определения следует, что множества $X$ и $Y$ равны тогда и только тогда, когда $X \subseteq Y$ и $Y \subseteq X$.
+\begin{example}
+    Множество корней уравнения
+    \begin{center}
+        $x^3 - 6x^2 + 11x - 6 = 0$
+    \end{center}
+    равно множеству $\{1,2,3\}$, а множество $\{51,2,3\}$ равно множеству $\{3,2,51,2\}$.
+\end{example}
+\par Заметим, что, перечисляя элементы множества, принято записывать каждый из них только один раз. Подчеркнем, что по определению равенство неважно, в каком порядке перечисляются элементы.
+
+\subsection{~Операции над множествами}
+\par Рассмотрим следующие Операции над множествами: пересечение, объединение, дополнение и разность. Эти операции называются \emph{булевыми}. Установим основные свойства булевых операций.
+\begin{definition}
+    Пусть $X$ и $Y$ ~--~ некоторые множества. Тогда \emph{пересечением} множеств $X$ и $Y$ называется множество
+    \begin{center}
+        $X \bigcap Y = \{x~|~x \in X$ и $x \in Y\}$,
+    \end{center}
+    \emph{объединением} множеств $X$ и $Y$ называется множество
+    \begin{center}
+        $X \bigcup Y = \{x~|~x \in X$ или $x \in Y\}$.
+    \end{center}
+\end{definition}
+\par Например, если $X = \{2,4,6,8,9\},~Y = \{1,3,6,9\}$, то $X \bigcap Y = \{6,9\}$, а $X \bigcup Y = \{1,2,3,4,6,8,9\}$.
+\par Отметим основные свойства введенных операций:
+\begin{enumerate}[ref=\arabic{enumi}]
+    \item $X \bigcap X = X$ ~--~ \emph{идемпотентность пересечения}; \label{enum:2:1}
+    \item $X \bigcup X = X$ ~--~ \emph{идемпотентность объединения}; \label{enum:2:2}
+    \item $X \bigcap Y = Y \bigcap X$ ~--~ \emph{коммутативность пересечения}; \label{enum:2:3}
+    \item $X \bigcup Y = Y \bigcup X$ ~--~ \emph{коммутативность объединения}; \label{enum:2:4}
+    \item $(X \bigcap Y) \bigcap Z = X \bigcap (Y \bigcap Z)$ ~--~ \emph{ассоциативность пересечения}; \label{enum:2:5}
+    \item $(X \bigcup Y) \bigcup Z = X \bigcup (Y \bigcup Z)$ ~--~ \emph{ассоциативность объединения}; \label{enum:2:6}
+    \item $X \bigcap (Y \bigcup Z) = (X \bigcap Y) \bigcup (X \bigcap Z)$ ~--~ \emph{дистрибутивность пересечения относительно объединения}; \label{enum:2:7}
+    \item $X \bigcup (Y \bigcap Z) = (X \bigcup Y) \bigcap (X \bigcup Z)$ ~--~ \emph{дистрибутивность объединения относительно пересечения}; \label{enum:2:8}
+    \item $X \bigcap \emptyset = \emptyset$; \label{enum:2:9}
+    \item $X \bigcup \emptyset = X$. \label{enum:2:10}
+\end{enumerate}
+\par Доказательство отмеченных свойств продемонстрируем на примере тождества \ref{enum:2:8}. Надо доказать, что любой элемент множества $X \bigcup (Y \bigcap Z)$ принадлежит множеству $(X \bigcup Y) \bigcap (X \bigcup Z)$, и обратно.
+\par Пусть $a \in X \bigcup (Y \bigcap Z)$. Тогда $a \in X$ или $a \in Y \bigcap Z$. Если $a \in X$, то $a \in X \bigcup Y$ и $a \in X \bigcup Z$, и поэтому $a$ принадлежит их пересечению, т. е. правой части. Если же $a \in Y \bigcap Z$, то $a \in Y$ и $a \in Z$. Отсюда следует, что $a \in X \bigcup Y$ и $a \in X \bigcup Z$, т. е. $a$ принадлежит и их пересечению.
+\par Докажем обратное включение. Пусть теперь $a \in (X \bigcup Y) \bigcap (X \bigcup Z)$. Тогда $a \in X \bigcup Y$ и $a \in X \bigcup Z$. Если $a \in X$, то $a \in X \bigcup (Y \bigcap Z)$. Если же $a \notin X$, то из условий $a \in X \bigcup Y$ и $a \in X \bigcup Z$ следует, что $a \in Y$ и $a \in Z$, а значит, $a \in Y \bigcap Z$, следовательно, $a \in X \bigcup (Y \bigcap Z)$.~~~~$\square$
 \end{document}

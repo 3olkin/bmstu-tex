@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.5.2)  5 MAY 2021 23:55
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.5.2)  6 MAY 2021 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/z4rx/Code/bmstu/tex/Homework/homework
-(/home/z4rx/Code/bmstu/tex/Homework/homework.tex
+**/home/z4rx/Code/bmstu/tex/homework/homework
+(/home/z4rx/Code/bmstu/tex/homework/homework.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -247,6 +247,14 @@ Package ExtSizes Warning: It is better to use one of the extsizes classes,
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen157
+\enit@toks=\toks20
+\enit@inbox=\box48
+\enit@count@id=\count273
+\enitdp@description=\count274
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
  (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -289,33 +297,33 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 105.
 )
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
 )
-\AM@pagewidth=\dimen159
-\AM@pageheight=\dimen160
+\AM@pagewidth=\dimen160
+\AM@pageheight=\dimen161
  (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2020/01/28 v0.5q Pdfpages driver for XeTeX (AM)
 )
-\AM@pagebox=\box48
-\AM@global@opts=\toks20
-\AM@pagecnt=\count273
-\AM@toc@title=\toks21
-\c@AM@survey=\count274
-\AM@templatesizebox=\box49
+\AM@pagebox=\box49
+\AM@global@opts=\toks21
+\AM@pagecnt=\count275
+\AM@toc@title=\toks22
+\c@AM@survey=\count276
+\AM@templatesizebox=\box50
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count275
+\FV@CodeLineNo=\count277
 \FV@InFile=\read3
-\FV@TabBox=\box50
-\c@FancyVerbLine=\count276
-\FV@StepNumber=\count277
+\FV@TabBox=\box51
+\c@FancyVerbLine=\count278
+\FV@StepNumber=\count279
 \FV@OutFile=\write3
 ) (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
  (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count278
+\etb@tempcnta=\count280
 ) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
  (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
@@ -323,144 +331,144 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
-\linenopenalty=\count279
-\output=\toks22
-\linenoprevgraf=\count280
-\linenumbersep=\dimen161
-\linenumberwidth=\dimen162
-\c@linenumber=\count281
-\c@pagewiselinenumber=\count282
-\c@LN@truepage=\count283
-\c@internallinenumber=\count284
-\c@internallinenumbers=\count285
-\quotelinenumbersep=\dimen163
-\bframerule=\dimen164
-\bframesep=\dimen165
-\bframebox=\box51
+\linenopenalty=\count281
+\output=\toks23
+\linenoprevgraf=\count282
+\linenumbersep=\dimen162
+\linenumberwidth=\dimen163
+\c@linenumber=\count283
+\c@pagewiselinenumber=\count284
+\c@LN@truepage=\count285
+\c@internallinenumber=\count286
+\c@internallinenumbers=\count287
+\quotelinenumbersep=\dimen164
+\bframerule=\dimen165
+\bframesep=\dimen166
+\bframebox=\box52
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count286
-\c@FV@TrueTabCounter=\count287
-\FV@TabBox@Group=\box52
-\FV@TmpLength=\skip56
-\c@FV@HighlightLinesStart=\count288
-\c@FV@HighlightLinesStop=\count289
-\FV@LoopCount=\count290
-\FV@NCharsBox=\box53
-\FV@BreakIndent=\dimen166
-\FV@BreakIndentNChars=\count291
-\FV@BreakSymbolSepLeft=\dimen167
-\FV@BreakSymbolSepLeftNChars=\count292
-\FV@BreakSymbolSepRight=\dimen168
-\FV@BreakSymbolSepRightNChars=\count293
-\FV@BreakSymbolIndentLeft=\dimen169
-\FV@BreakSymbolIndentLeftNChars=\count294
-\FV@BreakSymbolIndentRight=\dimen170
-\FV@BreakSymbolIndentRightNChars=\count295
-\c@FancyVerbLineBreakLast=\count296
-\FV@LineBox=\box54
-\FV@LineIndentBox=\box55
-\FV@LineWidth=\dimen171
+\c@FV@TrueTabGroupLevel=\count288
+\c@FV@TrueTabCounter=\count289
+\FV@TabBox@Group=\box53
+\FV@TmpLength=\skip57
+\c@FV@HighlightLinesStart=\count290
+\c@FV@HighlightLinesStop=\count291
+\FV@LoopCount=\count292
+\FV@NCharsBox=\box54
+\FV@BreakIndent=\dimen167
+\FV@BreakIndentNChars=\count293
+\FV@BreakSymbolSepLeft=\dimen168
+\FV@BreakSymbolSepLeftNChars=\count294
+\FV@BreakSymbolSepRight=\dimen169
+\FV@BreakSymbolSepRightNChars=\count295
+\FV@BreakSymbolIndentLeft=\dimen170
+\FV@BreakSymbolIndentLeftNChars=\count296
+\FV@BreakSymbolIndentRight=\dimen171
+\FV@BreakSymbolIndentRightNChars=\count297
+\c@FancyVerbLineBreakLast=\count298
+\FV@LineBox=\box55
+\FV@LineIndentBox=\box56
+\FV@LineWidth=\dimen172
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count297
-\Gm@cntv=\count298
-\c@Gm@tempcnt=\count299
-\Gm@bindingoffset=\dimen172
-\Gm@wd@mp=\dimen173
-\Gm@odd@mp=\dimen174
-\Gm@even@mp=\dimen175
-\Gm@layoutwidth=\dimen176
-\Gm@layoutheight=\dimen177
-\Gm@layouthoffset=\dimen178
-\Gm@layoutvoffset=\dimen179
-\Gm@dimlist=\toks23
+\Gm@cnth=\count299
+\Gm@cntv=\count300
+\c@Gm@tempcnt=\count301
+\Gm@bindingoffset=\dimen173
+\Gm@wd@mp=\dimen174
+\Gm@odd@mp=\dimen175
+\Gm@even@mp=\dimen176
+\Gm@layoutwidth=\dimen177
+\Gm@layoutheight=\dimen178
+\Gm@layouthoffset=\dimen179
+\Gm@layoutvoffset=\dimen180
+\Gm@dimlist=\toks24
 )
-\c@example=\count300
-\c@definition=\count301
+\c@example=\count302
+\c@definition=\count303
  (./homework.aux)
 \openout1 = `homework.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 48.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 44.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 44.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 44.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 44.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 44.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 44.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 44.
-LaTeX Font Info:    Redeclaring math accent \check on input line 44.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 44.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 44.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 44.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 44.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 44.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 48.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 48.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 48.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 48.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 48.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 48.
+LaTeX Font Info:    Redeclaring math accent \check on input line 48.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 48.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 48.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 48.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 48.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 44.
+(Font)              `operators' in the math version `normal' on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 44.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 48.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 44.
+(Font)              `operators' in the math version `bold' on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 44.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 44.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 44.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 44.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 44.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 44.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 48.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 44.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 44.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 44.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 48.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 44.
-\AtBeginShipoutBox=\box56
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 48.
+\AtBeginShipoutBox=\box57
  (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
@@ -502,39 +510,47 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OML+TimesNewRoman(0) on input line 49.
-LaTeX Font Info:    No file OMLTimesNewRoman(0).fd. on input line 49.
+LaTeX Font Info:    Trying to load font information for OML+TimesNewRoman(0) on input line 53.
+LaTeX Font Info:    No file OMLTimesNewRoman(0).fd. on input line 53.
 
 LaTeX Font Warning: Font shape `OML/TimesNewRoman(0)/m/up' undefined
-(Font)              using `OML/cmm/m/it' instead on input line 49.
+(Font)              using `OML/cmm/m/it' instead on input line 53.
 
-LaTeX Font Info:    Trying to load font information for OMS+TimesNewRoman(0) on input line 49.
-LaTeX Font Info:    No file OMSTimesNewRoman(0).fd. on input line 49.
+LaTeX Font Info:    Trying to load font information for OMS+TimesNewRoman(0) on input line 53.
+LaTeX Font Info:    No file OMSTimesNewRoman(0).fd. on input line 53.
 
 LaTeX Font Warning: Font shape `OMS/TimesNewRoman(0)/m/up' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 49.
+(Font)              using `OMS/cmsy/m/n' instead on input line 53.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] [3] [4] (./homework.aux)
+] [2] [3] [4]
+Overfull \hbox (1.01378pt too wide) in paragraph at lines 180--181
+[]\TU/TimesNewRoman(0)/m/n/14.4 Понятие множества в математике рассматривается как первичное, неопре-
+ []
+
+[5] [6] [7] (./homework.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 9410 strings out of 479819
- 196710 string characters out of 5895847
- 521568 words of memory out of 5000000
- 26369 multiletter control sequences out of 15000+600000
+ 9739 strings out of 479819
+ 202171 string characters out of 5895847
+ 530080 words of memory out of 5000000
+ 26694 multiletter control sequences out of 15000+600000
  535782 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,8n,92p,849b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,8n,92p,849b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.pdf (4 pages).
+Output written on homework.pdf (7 pages).
